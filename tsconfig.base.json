@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es6" /* 输出的目标js版本, 这里用es6 */,
+    "forceConsistentCasingInFileNames": true /* import时模块是否忽略大小写 */,
+    "esModuleInterop": true /* 直接通过`import`的方式来引用commonjs模块 */,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      // "@/*": ["./src/*"]
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": false,
+    "strict": true /* 所有严格检查的总开关 */,
+    // "alwaysStrict": true, /* 是否使用严格模式 */
+    "noImplicitAny": false /* 不允许隐式的any类型 */,
+    "noImplicitThis": false, /* 不允许不明确类型的this */
+    /* 输出相关 */
+    "module": "es6", /* 要使用的模块化的规范 */
+    // "outDir": "./dist/lib",
+    // "allowSyntheticDefaultImports": true, /* 自动合成一个默认导出 */
+  },
+  /* 编译文件所在的目录 */
+  "include": ["./src/**/*.ts"],
+  /* 排除在外的目录 */
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tsconfig"
+  ],
+  "typeRoots": ["./src/@types"]
+}

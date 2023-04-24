@@ -1,0 +1,58 @@
+{
+  "name": "@esidecn/i18n-t",
+  "version": "0.0.1",
+  "description": "",
+  "private": false,
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "rm": "rimraf dist",
+    "build:ts": "tsc --project tsconfig.json",
+    "pkg:pre-win64": "pkg -t node10-win-x64 ./dist/commonjs/pkg/index.js -o dist/win64/i18n-t.win64.exe",
+    "pkg:pre-mac64": "pkg -t node10-macos-x64 ./dist/commonjs/pkg/index.js -o dist/mac64/i18n-t.mac64.run",
+    "pkg:win64": "npm run build:ts && npm run pkg:pre-win64",
+    "pkg:mac64": "npm run build:ts && npm run pkg:pre-mac64",
+    "test:dev": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leobod/i18n-t.git"
+  },
+  "keywords": [
+    "util"
+  ],
+  "author": "leobod (leobod@eside.cn)",
+  "license": "mit",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/leobod/i18n-t#readme",
+  "dependencies": {
+    "commander": "^10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.21.0",
+    "@jest/globals": "^29.5.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^16.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "babel-eslint": "~10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.5",
+    "eslint": "^7.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.8.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

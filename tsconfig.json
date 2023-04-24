@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "declaration": false,
+    "outDir": "./dist",
+  },
+  /* 定义被继承的配置文件 */
+  "extends": "./tsconfig.base.json"
+}
